@@ -4,6 +4,7 @@ import 'lenis/dist/lenis.css'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import HeroRose from './components/HeroRose'
+import GesteScene from './components/GesteScene'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -34,6 +35,18 @@ export default function App() {
 
       <main>
         <HeroRose />
+
+        <GesteScene
+          id="coiffure"
+          folder="coiffure"
+          frameCount={124}
+          focusX={0.2}
+          textSide="right"
+          title="La coupe"
+          lead="Un geste net et précis, pensé pour votre visage, votre texture et votre quotidien."
+          services={['Coupe femme', 'Coupe homme', 'Frange et retouches', 'Brushing et mise en plis']}
+          cta="Réserver une coupe"
+        />
 
         <section className="next" id="reserver">
           <p className="next__text">La suite arrive : les gestes.</p>

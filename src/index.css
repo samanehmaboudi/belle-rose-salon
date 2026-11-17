@@ -186,6 +186,124 @@ a {
   color: rgb(244 231 223 / 0.6);
 }
 
+/* Scènes « gestes » */
+.geste {
+  position: relative;
+  height: 400vh;
+}
+
+.geste__stage {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100svh;
+  overflow: hidden;
+}
+
+.geste__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.geste__shade {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.geste--text-right .geste__shade {
+  background: linear-gradient(270deg, rgb(30 36 25 / 0.7) 0%, rgb(30 36 25 / 0.2) 45%, rgb(30 36 25 / 0) 65%);
+}
+
+.geste--text-left .geste__shade {
+  background: linear-gradient(90deg, rgb(30 36 25 / 0.7) 0%, rgb(30 36 25 / 0.2) 45%, rgb(30 36 25 / 0) 65%);
+}
+
+.geste__content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  width: min(34rem, 45%);
+  padding: 6rem 0;
+}
+
+.geste--text-right .geste__content {
+  right: var(--gutter);
+}
+
+.geste--text-left .geste__content {
+  left: var(--gutter);
+}
+
+.geste__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(3.2rem, 7.5vw, 7.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+}
+
+.geste__lead {
+  margin: 0;
+  max-width: 34ch;
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  line-height: 1.65;
+  color: rgb(244 231 223 / 0.85);
+}
+
+.geste__services {
+  margin: 0.5rem 0 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid rgb(221 176 166 / 0.3);
+}
+
+.geste__services li {
+  padding: 0.85rem 0;
+  border-bottom: 1px solid rgb(221 176 166 / 0.3);
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 1.6vw, 1.45rem);
+}
+
+.geste__cta {
+  align-self: flex-start;
+  color: var(--rose);
+  text-underline-offset: 0.3em;
+  text-decoration-thickness: 1px;
+}
+
+.geste__cta:hover {
+  color: var(--cream);
+}
+
+@media (max-width: 767px) {
+  .geste__content {
+    left: var(--gutter);
+    right: var(--gutter);
+    width: auto;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding: 6rem 0 3rem;
+  }
+
+  .geste--text-right .geste__shade,
+  .geste--text-left .geste__shade {
+    background: linear-gradient(0deg, rgb(30 36 25 / 0.9) 0%, rgb(30 36 25 / 0.4) 45%, rgb(30 36 25 / 0) 60%);
+  }
+
+  .geste__services li {
+    padding: 0.55rem 0;
+  }
+}
+
 /* Section suivante (temporaire) */
 .next {
   min-height: 60vh;
