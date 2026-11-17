@@ -60,6 +60,18 @@ export default function App() {
           cta="Réserver une couleur"
         />
 
+        <GesteScene
+          id="ongles"
+          folder="ongles"
+          frameCount={124}
+          focusX={0.2}
+          textSide="right"
+          title="Les ongles"
+          lead="Manucure et pédicure soignées, jusqu'au dernier reflet."
+          services={['Manucure classique', 'Pose de vernis semi-permanent', 'Pédicure spa', 'Soin des cuticules']}
+          cta="Réserver une manucure"
+        />
+
         <section className="next" id="reserver">
           <p className="next__text">La suite arrive : les gestes.</p>
         </section>
