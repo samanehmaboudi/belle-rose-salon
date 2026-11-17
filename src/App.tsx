@@ -48,6 +48,18 @@ export default function App() {
           cta="Réserver une coupe"
         />
 
+        <GesteScene
+          id="couleur"
+          folder="couleur"
+          frameCount={124}
+          focusX={0.78}
+          textSide="left"
+          title="La couleur"
+          lead="Des nuances sur mesure, posées avec patience pour une brillance qui dure."
+          services={['Coloration complète', 'Balayage', 'Reflets et gloss', 'Soin protecteur de la couleur']}
+          cta="Réserver une couleur"
+        />
+
         <section className="next" id="reserver">
           <p className="next__text">La suite arrive : les gestes.</p>
         </section>
