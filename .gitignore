@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Sources IA (images/vidéos originales, hors du site)
+assets/
