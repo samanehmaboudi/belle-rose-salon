@@ -5,6 +5,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import HeroRose from './components/HeroRose'
 import GesteScene from './components/GesteScene'
+import Reservation from './components/Reservation'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -72,9 +73,7 @@ export default function App() {
           cta="Réserver une manucure"
         />
 
-        <section className="next" id="reserver">
-          <p className="next__text">La suite arrive : les gestes.</p>
-        </section>
+        <Reservation />
       </main>
 
       <footer className="site-footer">
