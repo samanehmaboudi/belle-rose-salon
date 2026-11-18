@@ -6,13 +6,14 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import HeroRose from './components/HeroRose'
 import GesteScene from './components/GesteScene'
 import Reservation from './components/Reservation'
+import Header from './components/Header'
 
 gsap.registerPlugin(ScrollTrigger)
 
 export default function App() {
   useEffect(() => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
-    const lenis = new Lenis({ lerp: 0.08 })
+    const lenis = new Lenis({ lerp: 0.08, anchors: true })
     lenis.on('scroll', ScrollTrigger.update)
     const raf = (time: number) => lenis.raf(time * 1000)
     gsap.ticker.add(raf)
@@ -25,16 +26,9 @@ export default function App() {
 
   return (
     <>
-      <header className="site-header">
-        <a className="site-header__logo" href="#">
-          Belle Rose
-        </a>
-        <a className="btn btn--small" href="#reserver">
-          Réserver
-        </a>
-      </header>
+      <Header />
 
-      <main>
+      <main id="top">
         <HeroRose />
 
         <GesteScene
