@@ -4,6 +4,7 @@ const LINKS = [
   { href: '#coiffure', label: 'Coupe' },
   { href: '#couleur', label: 'Couleur' },
   { href: '#ongles', label: 'Ongles' },
+  { href: '#soins', label: 'Soins' },
 ]
 
 export default function Header() {

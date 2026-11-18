@@ -67,6 +67,18 @@ export default function App() {
           cta="Réserver une manucure"
         />
 
+        <GesteScene
+          id="soins"
+          folder="soins"
+          frameCount={120}
+          focusX={0.75}
+          textSide="left"
+          title="Les soins"
+          lead="Des soins du visage pensés pour révéler l'éclat naturel de votre peau."
+          services={['Soin éclat', 'Soin hydratation profonde', 'Nettoyage en profondeur', 'Massage du visage']}
+          cta="Réserver un soin"
+        />
+
         <Reservation />
       </main>
 
